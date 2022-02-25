@@ -1,0 +1,25 @@
+{
+  "A": {
+    "MAC": "A",
+    "MODEL": "AC",
+    "SECTOR": "AD",
+    "MAINTENANCE": { "1": "Algo 1", "2": "Sei la 1" }
+  },
+  "B": {
+    "MAC": "B",
+    "MODEL": "AC",
+    "SECTOR": "AD",
+    "MAINTENANCE": { "1": "Algo 2", "2": "Sei la 2" }
+  },
+  "1": {
+    "MAC": "1",
+    "MODEL": "1",
+    "SECTOR": "1",
+    "MAINTENANCE": {
+      "11/11/11": "aconteceu algo de estranho",
+      "12/12/12": "sei la bixo 2",
+      "13/11/20": "queimou a rosca",
+      "21/01/20": "infestacao de formigas"
+    }
+  }
+}
