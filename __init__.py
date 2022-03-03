@@ -8,6 +8,7 @@ while resp != "0":
     resp = mainMenu(printers)
 
     if resp == "0":
+        menuBar()
         print("Obrigado por usar o Control Printer Maintenance!")
         menuBar()
         break
