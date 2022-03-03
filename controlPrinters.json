@@ -2,12 +2,14 @@
   "A": {
     "MAC": "A",
     "MODEL": "AC",
+    "PURCHASED": "11/11/11",
     "SECTOR": "AD",
     "MAINTENANCE": { "1": "Algo 1", "2": "Sei la 1" }
   },
   "B": {
     "MAC": "B",
     "MODEL": "AC",
+    "PURCHASED": "11/11/11",
     "SECTOR": "AD",
     "MAINTENANCE": { "1": "Algo 2", "2": "Sei la 2" }
   },
@@ -15,6 +17,7 @@
     "MAC": "1",
     "MODEL": "1",
     "SECTOR": "1",
+    "PURCHASED": "11/11/11",
     "MAINTENANCE": {
       "11/11/11": "aconteceu algo de estranho",
       "12/12/12": "sei la bixo 2",

@@ -17,6 +17,7 @@ def saveData(printers):
 
 
 def registerPrinter(printers):
+    menuBar()
     mac = input("Informe o MAC da impressora: ").upper()
     if (validateEmptyFields(mac) == False):
         return
@@ -78,13 +79,17 @@ def searchPrinter(printers):
     menuBar()
     for printer in printers:
         if printers[printer][field] == search:
-            print(printers[printer])
-            if field == "MAC":
-                searchedPrinter = printers[printer]
-                return searchedPrinter
+            print("MAC: ", printers[printer]["MAC"])
+            print("Model: ", printers[printer]["MODEL"])
+            print("Setor: ", printers[printer]["SECTOR"])
+            print("Data da Compra: ", printers[printer]["PURCHASED"])
+            print("Manutenções: ")
+            for date in printers[printer]["MAINTENANCE"]:
+                print("\t" + date + ": " + printers[printer]["MAINTENANCE"][date])
 
 
 def editPrinter(printers):
+    menuBar()
     mac = input("Informe o MAC da impressora que deseja editar: ").upper()
     if (validateEmptyFields(mac) == False):
         return
@@ -105,9 +110,15 @@ def editPrinter(printers):
                 return
             elif opc == 1:
                 printers[printer]["MAC"] = input("Informe o novo MAC: ")
+                break
             elif opc == 2:
                 printers[printer]["SECTOR"] = input("Informe o novo SETOR: ")
+                break
             elif opc == 3:
+                dateBuy = validateDate(input("Informe a nova data da compra (dd/mm/aaaa): ").upper())
+                printers[printer]["PURCHASED"] = dateBuy
+                break
+            elif opc == 4:
                 resp = input("Adicionar uma nova manutenção? <S> Sim / <N> Não: ").upper()
                 menuBar()
                 
@@ -133,8 +144,10 @@ def editPrinter(printers):
 
                 else:
                     print("Opção inválida!")
+                break
             else:
                 print("Opção inválida!")
+                
             saveData(printers)
             menuBar()
             print("Impressora salva com sucesso!")
@@ -142,10 +155,17 @@ def editPrinter(printers):
 
 def showAllPrinters(printers):
     for printer in printers:
-        print(printers[printer])
+        menuBar()
+        print("MAC: ", printers[printer]["MAC"])
+        print("Model: ", printers[printer]["MODEL"])
+        print("Setor: ", printers[printer]["SECTOR"])
+        print("Data da Compra: ", printers[printer]["PURCHASED"])
+        print("Quantidade de Manutenções: " + str(len(printers[printer]["MAINTENANCE"])) + "")
+        
 
 
 def deletePrinter(printers):
+    menuBar()
     mac = input("Informe o MAC da impressora que deseja excluir: ").upper()
     if (validateEmptyFields(mac) == False):
         return

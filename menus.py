@@ -14,12 +14,12 @@ def mainMenu(printers):
 
     print("0 -> Sair")
     resp = input("Informe a sua escolha: ")
-    menuBar()
 
     return resp
 
 
 def menuSearchPrinter():
+    menuBar()
     print("Informe a opção de acordo com o número ao lado dela: ")
     print("1 -> Buscar pelo MAC")
     print("2 -> Buscar pelo modelo")
@@ -39,7 +39,8 @@ def menuEditPrinter(printer):
               printer["MAC"]+" que deseja editar: ")
         print("1 -> Modelo")
         print("2 -> Setor")
-        print("3 -> Manutenções")
+        print("3 -> Data da Compra")
+        print("4 -> Manutenções")
         print("0 -> Voltar")
         try:
             opc = int(input("Informe a sua escolha: "))
