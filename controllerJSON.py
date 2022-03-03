@@ -26,6 +26,8 @@ def registerPrinter(printers):
     sector = input("Informe o setor (SECTOR) que a impressora fica: ").upper()
     if (validateEmptyFields(sector) == False):
         return
+    dateBuy = input("Informe a data da compra da impressora (dd/mm/aaaa): ").upper()
+    dateBuy = validateDate(dateBuy)
 
     try:
         countMaintenance = int(input("Informe a quantidade de manutenções que a impressora já teve: "))
@@ -41,6 +43,7 @@ def registerPrinter(printers):
                 "MAC": mac,
                 "MODEL": model,
                 "SECTOR": sector,
+                "PURCHASED": dateBuy,
                 "MAINTENANCE": maintenance
             }
 
