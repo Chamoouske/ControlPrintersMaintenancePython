@@ -66,7 +66,6 @@ def searchPrinter(printers):
 
     if resp == "1":
         field = "MAC"
-        searchedPrinter = {}
     elif resp == "2":
         field = "MODEL"
     elif resp == "3":
